@@ -2,6 +2,7 @@ import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
 import axios from "axios";
+import styled from "styled-components";
 
 class App extends React.Component {
 	constructor() {
