@@ -13,7 +13,6 @@ const theme = {
 	whiteF50: "rgba(255,255,255,50)",
 	whiteF70: "rgba(255,255,255,70)",
 	whiteF85: "rgba(255,255,255,85)",
-	
 	//grays
 	gray500: "#6a737d",
 	gray000: "#fafbfc",
@@ -26,7 +25,6 @@ const theme = {
 	gray700: "#444d56",
 	gray800: "#2f363d",
 	gray900: "#24292e",
-
 	//greens
 	green500: "#28a745",
 	green000: "#f0fff4",
