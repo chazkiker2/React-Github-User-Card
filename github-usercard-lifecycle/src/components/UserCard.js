@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
+	border: 1px solid black;
 	display: flex;
 	flex-flow: column nowrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	div.infoDiv {
 		display: flex;
@@ -26,7 +27,7 @@ const UserCard = props => {
 				<a href={user.url}>Link to GitHub</a>
 				<p>Followers: {user.followers}</p>
 				<p>Following: {user.following}</p>
-				<p>Bio: {user.bio}</p>
+				<p>Bio: {user.bio ? user.bio : "None"}</p>
 			</div>
 		</Card>
 	);

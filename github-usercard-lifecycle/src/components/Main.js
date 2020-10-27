@@ -51,9 +51,9 @@ const Main = props => {
 				</nav>
 				<div className="container main-container">
 					<div className="gutter-condensed">
+						<UserCard user={user} />
 						<Switch>
 							<Route path="/overview">
-								<UserCard user={user} />
 								<UserOverview user={user} followers={followers} />
 							</Route>
 							<Route path="/followers">
