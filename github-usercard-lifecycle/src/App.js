@@ -13,6 +13,7 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
+			username: "chazkiker2",
 			user: {},
 			followers: [],
 			following: [],
@@ -21,7 +22,14 @@ class App extends React.Component {
 	}
 
 	fetchUser = (username) => {
-		axios.get(`https://api.github.com/users/${username}`)
+		axios.get(`https://api.github.com/users/${username}`
+		)
+		// , 
+		// {headers: {"User-Agent": "chazkiker2",}}
+		// {auth: {
+		// 	username: "chazkiker2",
+		// 	password: "",
+		// }}
 			.then(res => {
 				this.setState({
 					user: res.data,
@@ -30,7 +38,14 @@ class App extends React.Component {
 			});
 	};
 	fetchFollow = (username) => {
-		axios.get(`https://api.github.com/users/${username}/followers`)
+		axios.get(`https://api.github.com/users/${username}/followers`
+		)
+		// , 
+		// {headers: {"User-Agent": "chazkiker2",}}
+		// {auth: {
+		// 	username: "chazkiker2",
+		// 	password: "",
+		// }}
 			.then(res => {
 				this.setState({
 					followers: res.data,
@@ -38,7 +53,14 @@ class App extends React.Component {
 			})
 			.catch(err => {console.log(err);});
 
-		axios.get(`https://api.github.com/users/${username}/following`)
+		axios.get(`https://api.github.com/users/${username}/following`
+		)
+		// , 
+		// {headers: {"User-Agent": "chazkiker2",}}
+		// {auth: {
+		// 	username: "chazkiker2",
+		// 	password: "",
+		// }}
 			.then(res => {
 				this.setState({
 					following: res.data,
@@ -47,7 +69,14 @@ class App extends React.Component {
 			.catch(err => {console.log(err)});
 	};
 	fetchRepos = (username) => {
-		axios.get(`https://api.github.com/users/${username}/repos`)
+		axios.get(`https://api.github.com/users/${username}/repos`
+		)
+		// , 
+		// {headers: {"User-Agent": "chazkiker2",}}
+		// {auth: {
+		// 	username: "chazkiker2",
+		// 	password: "",
+		// }}
 			.then(res => {
 				this.setState({
 					repos: res.data,
@@ -65,12 +94,34 @@ class App extends React.Component {
 		this.fetchUser("chazkiker2");
 		this.fetchFollow("chazkiker2");
 		this.fetchRepos("chazkiker2");
+		// this.fetchUser(this.state.username);
+		// this.fetchFollow(this.state.username);
+		// this.fetchRepos(this.state.username);
+		// this.fetchAll(this.state.username)
 	}
+
+	handleFormSubmit = (input) => {
+		// this.setState({
+		// 	username: input, 
+		// })
+		this.fetchUser("chazkiker2");
+		this.fetchFollow("chazkiker2");
+		this.fetchRepos("chazkiker2");
+	};
+
+	// componentDidUpdate(prevState) {
+	// 	if (prevState.username !== this.state.username) {
+	// 		// this.fetchAll(this.state.username);
+	// 		this.fetchUser(this.state.username);
+	// 		this.fetchFollow(this.state.username);
+	// 		this.fetchRepos(this.state.username);
+	// 	}
+	// }
 
 	render() {
 		return (
 			<div className="App">
-				<Header />
+				<Header handleFormSubmit={this.handleFormSubmit} />
 				<Main 
 					user={this.state.user} 
 					followers={this.state.followers} 

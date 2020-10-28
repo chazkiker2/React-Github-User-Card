@@ -86,7 +86,7 @@ const RepoCard = styled.div`
 		/* margin: 0 2px; */
 		flex-flow: row nowrap;
 		overflow-x: scroll;
-		/* scrollbar-width: 0.1; */
+		scrollbar-width: 0;
 		justify-content: space-between;
 		align-items: flex-start;
 		&::-webkit-scrollbar {
