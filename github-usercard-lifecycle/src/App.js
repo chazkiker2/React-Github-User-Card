@@ -15,40 +15,68 @@ class App extends React.Component {
 		this.state = {
 			user: {},
 			followers: [],
+			following: [],
+			repos: [],
 		};
 	}
 
-	componentDidMount() {
-		axios.get(`https://api.github.com/users/chazkiker2`)
+	fetchUser = (username) => {
+		axios.get(`https://api.github.com/users/${username}`)
 			.then(res => {
-				// console.log(res);
-				console.log(res.data);
 				this.setState({
 					user: res.data,
 				})
 				console.log(this.state.user);
 			});
-		axios.get(`https://api.github.com/users/chazkiker2/followers`)
+	};
+	fetchFollow = (username) => {
+		axios.get(`https://api.github.com/users/${username}/followers`)
 			.then(res => {
-				console.log(res.data);
-				// this.setState(prevState => ({
-				// 	followers: [...prevState.followers, res.data],
-				// }))
 				this.setState({
 					followers: res.data,
 				})
-				console.log(this.state.followers);
 			})
-			.catch(err => {
-				console.log(err);
-			});
+			.catch(err => {console.log(err);});
+
+		axios.get(`https://api.github.com/users/${username}/following`)
+			.then(res => {
+				this.setState({
+					following: res.data,
+				})
+			})
+			.catch(err => {console.log(err)});
+	};
+	fetchRepos = (username) => {
+		axios.get(`https://api.github.com/users/${username}/repos`)
+			.then(res => {
+				this.setState({
+					repos: res.data,
+				})
+			})
+			.catch(err => {console.log(err)});
+	};
+	fetchAll = (username) => {
+		this.fetchUser(username);
+		this.fetchFollow(username);
+		this.fetchRepos(username);
+	};
+
+	componentDidMount() {
+		this.fetchUser("chazkiker2");
+		this.fetchFollow("chazkiker2");
+		this.fetchRepos("chazkiker2");
 	}
 
 	render() {
 		return (
 			<div className="App">
 				<Header />
-				<Main user={this.state.user} followers={this.state.followers} />
+				<Main 
+					user={this.state.user} 
+					followers={this.state.followers} 
+					following={this.state.following}
+					repos={this.state.repos}
+				/>
 			</div>
 		);
 	}

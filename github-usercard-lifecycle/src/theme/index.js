@@ -6,6 +6,7 @@ const theme = {
 	blackF50: "rgba(27,31,35,50)",
 	blackF70: "rgba(27,31,35,70)",
 	blackF85: "rgba(27,31,35,85)",
+
 	//white fades
 	white: "rgb(255,255,255)",
 	whiteF15: "rgba(255,255,255,15)",
@@ -13,6 +14,7 @@ const theme = {
 	whiteF50: "rgba(255,255,255,50)",
 	whiteF70: "rgba(255,255,255,70)",
 	whiteF85: "rgba(255,255,255,85)",
+	
 	//grays
 	gray500: "#6a737d",
 	gray000: "#fafbfc",
@@ -26,17 +28,26 @@ const theme = {
 	gray800: "#2f363d",
 	gray900: "#24292e",
 	//greens
-	green500: "#28a745",
 	green000: "#f0fff4",
 	green100: "#dcffe4",
 	green200: "#bef5cb",
 	green300: "#85e89d",
 	green400: "#34d058",
-	//green500: "#28a745",
+	green500: "#28a745",
 	green600: "#22863a",
 	green700: "#176f2c",
 	green800: "#165c26",
 	green900: "#144620",
+	//blues
+	blue100: "#dbedff",
+	blue200: "#c8e1ff",
+	blue300: "#79b8ff",
+	blue400: "#2188ff",
+	blue500: "#0366d6",
+	blue600: "#005cc5",
+	blue700: "#044289",
+	blue800: "#032f62",
+	blue900: "#05264c",
 };
 
 export default theme;

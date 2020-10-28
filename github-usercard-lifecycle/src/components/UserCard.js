@@ -2,11 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
-	border: 1px solid black;
+	/* border: 1px solid black; */
+	margin-left: 40px;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: center;
+	/* position: sticky; 
+	top: 84px;  */
+	/* margin-top: 0px;*/
+img {
+	border-radius: 50%;
+}
 	div.infoDiv {
 		display: flex;
 		flex-flow: column nowrap;
