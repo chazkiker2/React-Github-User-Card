@@ -13,7 +13,7 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			username: "chazkiker2",
+			// username: "chazkiker2",
 			user: {},
 			followers: [],
 			following: [],
@@ -104,9 +104,9 @@ class App extends React.Component {
 		// this.setState({
 		// 	username: input, 
 		// })
-		this.fetchUser("chazkiker2");
-		this.fetchFollow("chazkiker2");
-		this.fetchRepos("chazkiker2");
+		this.fetchUser(input);
+		this.fetchFollow(input);
+		this.fetchRepos(input);
 	};
 
 	// componentDidUpdate(prevState) {
