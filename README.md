@@ -1,6 +1,8 @@
 # Module Project: Component Lifecycle Methods - React Github User Card
 
-This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project. This module explored lifecycle methods in class components. In your project you will demonstrate proficiency of these concepts by recreating the Github User Card project, but as a React application this time.
+This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project.
+This module explored lifecycle methods in class components. In your project you will
+demonstrate proficiency of these concepts by recreating the Github User Card project, but as a React application this time.
 
 ## Introduction
 
@@ -8,24 +10,25 @@ This project allows you to practice the concepts and techniques learned in this 
 
 ### Commits
 
-Commit your code regularly and meaningfully. This helps you and any collaborators in case you ever need to return to old code for any number of reasons.
+Commit your code regularly and meaningfully. This helps you and any collaborators in case you
+ever need to return to old code for any number of reasons.
 
 ## Instructions
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] Use CRA to create a new React app in this repository
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Clone your OWN version of the repository in your terminal
+- [x] Use CRA to create a new React app in this repository
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into main (student's Repository). **Please don't merge your own pull request**
-- [ ] From the home page of your repo, make sure you have your branch selected
-- [ ] Copy the URL and paste it into Canvas
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into main (student's Repository). **Please don't merge your own pull request**
+- [x] From the home page of your repo, make sure you have your branch selected
+- [x] Copy the URL and paste it into Canvas
 
 ### Task 2: Minimum Viable Product
 
@@ -35,7 +38,12 @@ Follow these steps for completing your project.
 
 #### Planning your App
 
-This is an important step for any project you will be working on. You will want to plan out what data you will need, which component will manage that data via state, what functions you may need to update that state, and where you need to pass the data to render it to the DOM. I love to use pen and paper or a whiteboard for this. The visuals can help a lot when you're deep into your code. After I finish that, I will write out a list of steps that I think it will take to build the app. This gives me a starting point, and direction as I proceed. This list always changes a bit as you are building, but it should give you a good flow and some good anchor points.
+This is an important step for any project you will be working on. You will want to plan out what data you will need, 
+which component will manage that data via state, what functions you may need to update that state, 
+and where you need to pass the data to render it to the DOM. I love to use pen and paper or a whiteboard for this. 
+The visuals can help a lot when you're deep into your code. After I finish that, I will write out a list of steps that 
+I think it will take to build the app. This gives me a starting point, and direction as I proceed. 
+This list always changes a bit as you are building, but it should give you a good flow and some good anchor points.
 
 Also, since you have used the Github API before, you know some of the gotchas. Make sure to plan and watch for those.
 
